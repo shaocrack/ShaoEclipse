@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<!-- <h1 id="SHAO">SHAOPRO</h1> -->
+<body>
+    
+    <div class="eclipse">
+        <div class="moon"></div>
+        <div class="sun"></div>
+        <div id="m" style="display: none;">
+            <p>De las 382mil palabras en el diccionario</p>
+            <p>no encontre ninguna,que escritba tu</p>
+            <p>Hermosa sonrisa C:</p>
+        </div>
+        <div id="m2" style="display: none;">
+            <p>El eclipse en el cielo es hermoso, cierto,</p>
+            <p>pero tu encanto, querida, lo eclipsa por completo.</p>
+            <p>Tu sonrisa brilla más que cualquier luna,</p>
+            <p>y tu presencia es el sol en mi fortuna.</p>
+        </div>
+        <div id="m3" style="display: none;">
+            <p>¿Y SABES UNA COSA?</p>
+        </div>
+        <div id="m4" style="display: none;">
+            <p>AUN TE EXTRAÑO :C</p>
+            <p>VUELVEEEE!!</p>
+            <p>ATT:ALEX</p>
+        </div
+        <!-- <div class="message-box" id="messageBox" style="display: none;">
+            <div class="message-content">
+                <
+                
+            </div>
+        </div> -->
+    </div>
+</body>
+<script>
+function startEclipse() {
+    const sun = document.querySelector('.sun');
+    const showMessageBtn = document.getElementById('showMessageBtn');
+    const messageBox = document.getElementById('m');
+    const messageBox2 = document.getElementById('m2');
+    const messageBox3 = document.getElementById('m3');
+    const messageBox4 = document.getElementById('m4');
+
+    sun.style.display = 'block';
+
+    setTimeout(() => {
+        showMessageBtn.style.display = 'block';
+    }, 6000); 
+   
+    setTimeout(() => {
+        messageBox.style.display = 'block';
+       
+    }, 15000);
+    setTimeout(() => {
+       
+        messageBox2.style.display = 'block';
+    }, 6000);
+    setTimeout(() => {
+        
+        messageBox3.style.display = 'block';
+    }, 20000);
+    setTimeout(() => {
+       
+        messageBox4.style.display = 'block';
+    }, 28000);
+}
+function typeWriter(text, i, element) {
+    if (i < text.length) {
+        element.querySelector('p').textContent += text.charAt(i);
+        i++;
+        setTimeout(function () {
+            typeWriter(text, i, element);
+        }, 50); 
+    }
+}
+</script>
+<script>
+   
+    window.onload = startEclipse;
+</script>
+</html>
